@@ -5,17 +5,15 @@
 
 .header {
   width: 100%;
-  height: 80px;
-  background-color: blue;
-  margin-bottom: 10px;
+  height: 60px;
+  border-bottom: solid thin lightgrey;
 }
 
 .app-name {
-  line-height: 80px;
+  line-height: 60px;
   margin-left: 20px;
   font-size: 32px;
   font-weight: bold;
-  color: white;
 }
 
 .landing {
@@ -78,8 +76,153 @@ form a {
   height: 90px;
 }
 
+.icon {
+  width: 40px;
+  height: 50px;
+  float: left;
+  margin-top: 2px;
+  margin-left: 40px;
+}
+
 h2 {
   margin-bottom: 20px;
   text-align: center;
   margin: 20px 0 20px 0;
+}
+
+.todo-list {
+  width: 200px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  padding: 20px 5px 0 5px;
+  opacity: 0.8;
+  float: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.todo-list h2 {
+  color: white;
+  padding-left: 0;
+}
+
+.todo-list ul {
+  list-style: none;
+  clear: both;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.todo-list ul li {
+  color: white;
+  padding: 10px;
+  border-bottom: solid thin lightgrey;
+  cursor: pointer;
+}
+
+.todo-list ul li:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.btn-sm {
+  color: white;
+  float: right;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+
+.btn-share {
+  cursor: pointer;
+  float: right;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.btn-share:hover {
+  color: grey;
+}
+
+.btn-del {
+  cursor: pointer;
+  color: red;
+}
+
+.btn-del:hover {
+  color: red;
+  opacity: 0.4;
+}
+
+.todo-items {
+  width: 30%;
+  float: left;
+  padding: 10px;
+  border: solid thin lightgrey;
+  border-radius: 4px;
+  margin: 2px;
+  height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.todo-items h2 {
+  text-align: left;
+}
+
+.todo-items ul {
+  list-style-type: none;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.todo-items ul li {
+  padding: 8px;
+  border-bottom: solid thin lightgray;
+}
+
+.todo-items-content {
+  margin-left: 20px;
+}
+
+input[type="checkbox"] {
+  float: left;
+  -ms-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  margin-top: 5px;
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+
+.grid-item {
+  text-align: right;
+}
+
+.item-date {
+  font-style: italic;
+  color: red;
+  font-weight: 12px;
+}
+
+.new-item {
+  width: 30%;
+  float: left;
+  padding: 10px;
+  border: solid thin lightgrey;
+  border-radius: 4px;
+  margin: 2px;
+  height: 90vh;
+}
+
+.new-item h2 {
+  text-align: left;
 }
