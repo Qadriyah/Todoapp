@@ -12,6 +12,28 @@
     <div class="header">
         <img src="assets/media/icon.png" alt="" class="icon">
         <div class="app-name">Todo App</div>
+        <div class="top-menu">
+            <div class="top-menu-item">
+                <a href="todo-list.html">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </div>
+            <div class="top-menu-item">
+                <a href="profile.html">
+                    <i class="fas fa-user-circle"></i> Profile
+                </a>
+            </div>
+            <div class="top-menu-item">
+                <a href="#">
+                    <i class="fas fa-share-alt"></i> Shared
+                </a>
+            </div>
+            <div class="top-menu-item">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </div>
     </div>
     <div class="todo-list">
         <h2>My Tasks</h2>
@@ -41,6 +63,7 @@
                         <div class="grid-item">
                             <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
                         </div>
+                        <div class="grid-desc">Buy banana from Nakasero market on my way home</div>
                     </div>
                     <div class="item-date">Mon 17, Sep 2018</div>
                 </div>
@@ -53,6 +76,7 @@
                         <div class="grid-item">
                             <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
                         </div>
+                        <div class="grid-desc"></div>
                     </div>
                     <div class="item-date">Tue 18, Sep 2018</div>
                 </div>
@@ -65,6 +89,7 @@
                         <div class="grid-item">
                             <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
                         </div>
+                        <div class="grid-desc"></div>
                     </div>
                     <div class="item-date">Wed 19, Sep 2018</div>
                 </div>
@@ -77,6 +102,7 @@
                         <div class="grid-item">
                             <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
                         </div>
+                        <div class="grid-desc"></div>
                     </div>
                     <div class="item-date">Thur 20, Sep 2018</div>
                 </div>
@@ -89,6 +115,7 @@
                         <div class="grid-item">
                             <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
                         </div>
+                        <div class="grid-desc"></div>
                     </div>
                     <div class="item-date">Mon 21, Sep 2018</div>
                 </div>
@@ -101,6 +128,7 @@
                         <div class="grid-item">
                             <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
                         </div>
+                        <div class="grid-desc"></div>
                     </div>
                     <div class="item-date">Mon 22, Sep 2018</div>
                 </div>
@@ -113,6 +141,7 @@
                         <div class="grid-item">
                             <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
                         </div>
+                        <div class="grid-desc"></div>
                     </div>
                     <div class="item-date">Mon 23, Sep 2018</div>
                 </div>
@@ -125,6 +154,7 @@
                         <div class="grid-item">
                             <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
                         </div>
+                        <div class="grid-desc"></div>
                     </div>
                     <div class="item-date">Mon 24, Sep 2018</div>
                 </div>
@@ -137,6 +167,7 @@
                         <div class="grid-item">
                             <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
                         </div>
+                        <div class="grid-desc"></div>
                     </div>
                     <div class="item-date">Mon 25, Sep 2018</div>
                 </div>
@@ -149,6 +180,7 @@
                         <div class="grid-item">
                             <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
                         </div>
+                        <div class="grid-desc"></div>
                     </div>
                     <div class="item-date">Mon 26, Sep 2018</div>
                 </div>
@@ -159,7 +191,9 @@
         <h2>Add Todo List Item</h2>
         <form action="">
             <input type="text" name="todo" id="todo" placeholder="New Todo Item..." class="input-field" />
+            <span>Date:</span>
             <input type="date" name="date" placeholder="Date..." class="input-field">
+            <textarea name="" id="" rows="5" class="input-field" placeholder="Description..."></textarea>
             <input type="submit" value="Add" class="btn" />
         </form>
     </div>
