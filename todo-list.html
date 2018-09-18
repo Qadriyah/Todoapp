@@ -10,8 +10,10 @@
 
 <body>
     <div class="header">
-        <img src="assets/media/icon.png" alt="" class="icon">
-        <div class="app-name">Todo App</div>
+        <a href="todo-list.html">
+            <img src="assets/media/logo.png" alt="" class="icon">
+            <div class="app-name">Todo App</div>
+        </a>
         <div class="top-menu">
             <div class="top-menu-item">
                 <a href="todo-list.html">
@@ -35,167 +37,171 @@
             </div>
         </div>
     </div>
-    <div class="todo-list">
-        <h2>My Tasks</h2>
-        <form action="">
-            <input type="text" name="todo" id="todo" placeholder="New Todo List..." class="input-field" />
-            <input type="submit" value="Add" class="btn" />
-        </form>
-        <ul>
-            <li>Shopping</li>
-            <li>Exercise</li>
-            <li>Order Printer Cartridge</li>
-            <li>Pay Utility Bills</li>
-            <li>Design a web page</li>
-            <li>Create a Database Design</li>
-        </ul>
-    </div>
-    <div class="todo-items">
-        <i class="fas fa-trash-alt fa-2x btn-share" title="Delete Todo List"></i>
-        <i class="fas fa-share-alt-square btn-share fa-2x" title="Share Todo List"></i>
-        <h2>Shopping</h2>
-        <ul>
-            <li>
-                <input type="checkbox" name="checkbox[]" />
-                <div class="todo-items-content">
-                    <div class="item-name">
-                        <div>Banana</div>
-                        <div class="grid-item">
-                            <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+    <div class="todo-container">
+        <div class="todo-list">
+            <h2>My Tasks</h2>
+            <form action="">
+                <input type="text" name="todo" id="todo" placeholder="New Todo List..." class="input-field" />
+                <input type="submit" value="Add" class="btn" />
+            </form>
+            <ul>
+                <li>Shopping</li>
+                <li>Exercise</li>
+                <li>Order Printer Cartridge</li>
+                <li>Pay Utility Bills</li>
+                <li>Design a web page</li>
+                <li>Create a Database Design</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="todo-items">
+                <i class="fas fa-trash-alt fa-2x btn-share" title="Delete Todo List"></i>
+                <i class="fas fa-share-alt-square btn-share fa-2x" title="Share Todo List"></i>
+                <h2>Shopping</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="checkbox[]" />
+                        <div class="todo-items-content">
+                            <div class="item-name">
+                                <div>Banana</div>
+                                <div class="grid-item">
+                                    <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                                </div>
+                                <div class="grid-desc">Buy banana from Nakasero market on my way home</div>
+                            </div>
+                            <div class="item-date">Mon 17, Sep 2018</div>
                         </div>
-                        <div class="grid-desc">Buy banana from Nakasero market on my way home</div>
-                    </div>
-                    <div class="item-date">Mon 17, Sep 2018</div>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" name="checkbox[]" />
-                <div class="todo-items-content">
-                    <div class="item-name">
-                        <div>Vegetables</div>
-                        <div class="grid-item">
-                            <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox[]" />
+                        <div class="todo-items-content">
+                            <div class="item-name">
+                                <div>Vegetables</div>
+                                <div class="grid-item">
+                                    <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                                </div>
+                                <div class="grid-desc"></div>
+                            </div>
+                            <div class="item-date">Tue 18, Sep 2018</div>
                         </div>
-                        <div class="grid-desc"></div>
-                    </div>
-                    <div class="item-date">Tue 18, Sep 2018</div>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" name="checkbox[]" />
-                <div class="todo-items-content">
-                    <div class="item-name">
-                        <div>Meat</div>
-                        <div class="grid-item">
-                            <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox[]" />
+                        <div class="todo-items-content">
+                            <div class="item-name">
+                                <div>Meat</div>
+                                <div class="grid-item">
+                                    <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                                </div>
+                                <div class="grid-desc"></div>
+                            </div>
+                            <div class="item-date">Wed 19, Sep 2018</div>
                         </div>
-                        <div class="grid-desc"></div>
-                    </div>
-                    <div class="item-date">Wed 19, Sep 2018</div>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" name="checkbox[]" />
-                <div class="todo-items-content">
-                    <div class="item-name">
-                        <div>Fish</div>
-                        <div class="grid-item">
-                            <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox[]" />
+                        <div class="todo-items-content">
+                            <div class="item-name">
+                                <div>Fish</div>
+                                <div class="grid-item">
+                                    <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                                </div>
+                                <div class="grid-desc"></div>
+                            </div>
+                            <div class="item-date">Thur 20, Sep 2018</div>
                         </div>
-                        <div class="grid-desc"></div>
-                    </div>
-                    <div class="item-date">Thur 20, Sep 2018</div>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" name="checkbox[]" />
-                <div class="todo-items-content">
-                    <div class="item-name">
-                        <div>Potatoes</div>
-                        <div class="grid-item">
-                            <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox[]" />
+                        <div class="todo-items-content">
+                            <div class="item-name">
+                                <div>Potatoes</div>
+                                <div class="grid-item">
+                                    <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                                </div>
+                                <div class="grid-desc"></div>
+                            </div>
+                            <div class="item-date">Mon 21, Sep 2018</div>
                         </div>
-                        <div class="grid-desc"></div>
-                    </div>
-                    <div class="item-date">Mon 21, Sep 2018</div>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" name="checkbox[]" />
-                <div class="todo-items-content">
-                    <div class="item-name">
-                        <div>Bread and Butter</div>
-                        <div class="grid-item">
-                            <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox[]" />
+                        <div class="todo-items-content">
+                            <div class="item-name">
+                                <div>Bread and Butter</div>
+                                <div class="grid-item">
+                                    <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                                </div>
+                                <div class="grid-desc"></div>
+                            </div>
+                            <div class="item-date">Mon 22, Sep 2018</div>
                         </div>
-                        <div class="grid-desc"></div>
-                    </div>
-                    <div class="item-date">Mon 22, Sep 2018</div>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" name="checkbox[]" />
-                <div class="todo-items-content">
-                    <div class="item-name">
-                        <div>Rice and Oil</div>
-                        <div class="grid-item">
-                            <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox[]" />
+                        <div class="todo-items-content">
+                            <div class="item-name">
+                                <div>Rice and Oil</div>
+                                <div class="grid-item">
+                                    <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                                </div>
+                                <div class="grid-desc"></div>
+                            </div>
+                            <div class="item-date">Mon 23, Sep 2018</div>
                         </div>
-                        <div class="grid-desc"></div>
-                    </div>
-                    <div class="item-date">Mon 23, Sep 2018</div>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" name="checkbox[]" />
-                <div class="todo-items-content">
-                    <div class="item-name">
-                        <div>Beans</div>
-                        <div class="grid-item">
-                            <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox[]" />
+                        <div class="todo-items-content">
+                            <div class="item-name">
+                                <div>Beans</div>
+                                <div class="grid-item">
+                                    <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                                </div>
+                                <div class="grid-desc"></div>
+                            </div>
+                            <div class="item-date">Mon 24, Sep 2018</div>
                         </div>
-                        <div class="grid-desc"></div>
-                    </div>
-                    <div class="item-date">Mon 24, Sep 2018</div>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" name="checkbox[]" />
-                <div class="todo-items-content">
-                    <div class="item-name">
-                        <div>Tomatoes and Onions</div>
-                        <div class="grid-item">
-                            <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox[]" />
+                        <div class="todo-items-content">
+                            <div class="item-name">
+                                <div>Tomatoes and Onions</div>
+                                <div class="grid-item">
+                                    <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                                </div>
+                                <div class="grid-desc"></div>
+                            </div>
+                            <div class="item-date">Mon 25, Sep 2018</div>
                         </div>
-                        <div class="grid-desc"></div>
-                    </div>
-                    <div class="item-date">Mon 25, Sep 2018</div>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" name="checkbox[]" />
-                <div class="todo-items-content">
-                    <div class="item-name">
-                        <div>Flour (Maize, Millet, Soya)</div>
-                        <div class="grid-item">
-                            <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checkbox[]" />
+                        <div class="todo-items-content">
+                            <div class="item-name">
+                                <div>Flour (Maize, Millet, Soya)</div>
+                                <div class="grid-item">
+                                    <i class="fas fa-trash-alt btn-del" title="Delete Item"></i>
+                                </div>
+                                <div class="grid-desc"></div>
+                            </div>
+                            <div class="item-date">Mon 26, Sep 2018</div>
                         </div>
-                        <div class="grid-desc"></div>
-                    </div>
-                    <div class="item-date">Mon 26, Sep 2018</div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="new-item">
-        <h2>Add Todo List Item</h2>
-        <form action="">
-            <input type="text" name="todo" id="todo" placeholder="New Todo Item..." class="input-field" />
-            <span>Date:</span>
-            <input type="date" name="date" placeholder="Date..." class="input-field">
-            <textarea name="" id="" rows="5" class="input-field" placeholder="Description..."></textarea>
-            <input type="submit" value="Add" class="btn" />
-        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class="new-item">
+                <h2>Add Todo List Item</h2>
+                <form action="">
+                    <input type="text" name="todo" id="todo" placeholder="New Todo Item..." class="input-field" />
+                    <span>Date:</span>
+                    <input type="date" name="date" placeholder="Date..." class="input-field">
+                    <textarea name="" id="" rows="5" class="input-field" placeholder="Description..."></textarea>
+                    <input type="submit" value="Add" class="btn" />
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 
