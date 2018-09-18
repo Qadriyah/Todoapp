@@ -4,44 +4,103 @@
 }
 
 body {
-  background-color: rgb(211, 211, 211, 0.3);
+  background-color: rgb(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .header {
   width: 100%;
   height: 60px;
-  border-bottom: solid thin lightgrey;
-  background-color: white;
+  background-color: blue;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 .app-name {
   line-height: 60px;
-  margin-left: 20px;
+  margin-left: 5px;
   font-size: 32px;
+  font-weight: bold;
+  float: left;
+  color: white;
+}
+
+.top-menu {
+  float: right;
+  margin-right: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  line-height: 60px;
+}
+
+.top-menu-item {
+  padding-left: 10px;
+}
+
+.top-menu-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.top-menu-item a:hover {
   font-weight: bold;
 }
 
 .landing {
   width: 100%;
   height: 100vh;
-  background-color: black;
-  opacity: 0.6;
+  background: url("../media/icon.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.3;
+  margin-top: -25px;
+}
+
+.landing-content {
+  width: 400px;
+  height: 200px;
+  background-color: blueviolet;
+  margin-top: 200px;
 }
 
 .container {
-  margin-left: 20%;
-  margin-right: 20%;
+  padding-left: 200px;
+  padding-right: 100px;
+  padding-top: 100px;
+  min-height: 100vh;
+  overflow: auto;
+  background: blue;
+  background: -webkit-linear-gradient(to right, navy, rgb(27, 116, 250));
+  background: linear-gradient(to right, navy, rgb(27, 116, 250));
 }
 
 .content {
+  width: 50%;
+  float: left;
+  color: white;
+  padding-right: 50px;
+  padding-bottom: 20px;
+}
+
+.form-content {
   border: solid thin lightgrey;
   border-radius: 4px;
-  margin: 0 auto;
   width: 250px;
   padding: 20px;
-  margin-top: 20px;
   background-color: white;
   padding-bottom: 50px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.content h1 {
+  font-size: 36px;
+}
+
+.content ul li {
+  font-size: 24px;
+  margin-top: 20px;
 }
 
 .input-field {
@@ -66,7 +125,7 @@ body {
 
 .btn:hover {
   cursor: pointer;
-  background-color: rgb(43, 43, 197);
+  background-color: rgb(29, 29, 218);
 }
 
 form > p {
@@ -79,15 +138,15 @@ form a {
 }
 
 .logo {
-  width: 80px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
 }
 
 .icon {
-  width: 40px;
+  width: 50px;
   height: 50px;
   float: left;
-  margin-top: 2px;
+  margin-top: 5px;
   margin-left: 40px;
 }
 
@@ -97,16 +156,28 @@ h2 {
   margin: 20px 0 20px 0;
 }
 
+.todo-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  position: relative;
+  top: 60px;
+  bottom: 0;
+}
+
 .todo-list {
   width: 200px;
-  height: 100vh;
+  height: 100%;
   background-color: black;
   color: white;
-  padding: 20px 5px 0 5px;
+  padding: 5px;
   opacity: 0.8;
   float: left;
   overflow-y: auto;
   overflow-x: hidden;
+  position: fixed;
+  bottom: 0;
+  top: 60px;
 }
 
 .todo-list h2 {
@@ -119,7 +190,7 @@ h2 {
   clear: both;
   margin-left: 0;
   padding-left: 0;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .todo-list ul li {
@@ -134,13 +205,6 @@ h2 {
   color: black;
 }
 
-.btn-sm {
-  color: white;
-  float: right;
-  cursor: pointer;
-  margin-bottom: 3px;
-}
-
 .btn-share {
   cursor: pointer;
   float: right;
@@ -149,7 +213,7 @@ h2 {
 }
 
 .btn-share:hover {
-  color: grey;
+  color: blue;
 }
 
 .btn-del {
@@ -162,17 +226,25 @@ h2 {
   opacity: 0.4;
 }
 
+.main-content {
+  position: absolute;
+  left: 210px;
+}
+
 .todo-items {
-  width: 30%;
+  width: 50%;
   float: left;
   padding: 10px;
   border: solid thin lightgrey;
   border-radius: 4px;
-  margin: 2px;
-  height: 90vh;
+  margin: 4px;
+  height: 85vh;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: white;
+  box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .todo-items h2 {
@@ -216,6 +288,12 @@ input[type="checkbox"] {
   text-align: right;
 }
 
+.grid-desc {
+  grid-row: 2 / span 2;
+  font-weight: normal;
+  font-family: "Courier New", Courier, monospace;
+}
+
 .item-date {
   font-style: italic;
   color: red;
@@ -223,16 +301,139 @@ input[type="checkbox"] {
 }
 
 .new-item {
-  width: 30%;
+  width: 40%;
   float: left;
   padding: 10px;
   border: solid thin lightgrey;
   border-radius: 4px;
-  margin: 2px;
-  height: 90vh;
+  margin: 4px;
+  height: 85vh;
   background-color: white;
+  box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .new-item h2 {
   text-align: left;
+}
+
+.profile-header {
+  width: 100%;
+  height: 300px;
+  background-color: skyblue;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-img-cell {
+  line-height: 300px;
+  padding-top: 60px;
+  text-align: right;
+}
+
+.grid-cell {
+  padding-top: 65px;
+  text-align: center;
+}
+
+.grid-cell h1 {
+  margin-top: 10px;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border: solid thin lightgrey;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 999px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .todo-items {
+    width: 50%;
+  }
+
+  .new-item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+  }
+
+  .content {
+    width: 100%;
+    color: white;
+    padding-bottom: 20px;
+  }
+
+  .form-content {
+    border: solid thin lightgrey;
+    border-radius: 4px;
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 918px) and (max-width: 1097px) {
+  .todo-items {
+    width: 45%;
+  }
+
+  .new-item {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 917px) {
+  .todo-items {
+    width: 90%;
+  }
+
+  .new-item {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  body {
+    width: 615px;
+  }
+
+  .todo-items {
+    margin-top: 65px;
+  }
+
+  .top-menu {
+    position: absolute;
+    top: 60px;
+    left: 210px;
+    width: 400px;
+    background-color: lightgray;
+  }
+
+  .top-menu-item {
+    padding-left: 5px;
+  }
+
+  .top-menu-item a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .top-menu-item a:hover {
+    font-weight: bold;
+  }
 }
