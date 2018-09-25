@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"
         crossorigin="anonymous"></script>
+    <script src="assets/css/index.js"></script>
 </head>
 
 <body>
@@ -17,28 +18,34 @@
         <div class="top-menu">
             <div class="top-menu-item">
                 <a href="todo-list.html">
-                    <i class="fas fa-home"></i> Home
+                    <i class="fas fa-home"></i> <span class="show-hide">Home</span>
                 </a>
             </div>
             <div class="top-menu-item">
                 <a href="profile.html">
-                    <i class="fas fa-user-circle"></i> Profile
+                    <i class="fas fa-user-circle"></i> <span class="show-hide">Profile</span>
                 </a>
             </div>
             <div class="top-menu-item">
                 <a href="#">
-                    <i class="fas fa-share-alt"></i> Shared
+                    <i class="fas fa-share-alt"></i> <span class="show-hide">Shared</span>
                 </a>
             </div>
             <div class="top-menu-item">
                 <a href="index.html">
-                    <i class="fas fa-sign-out-alt"></i> Logout
+                    <i class="fas fa-sign-out-alt"></i> <span class="show-hide">Logout</span>
                 </a>
             </div>
         </div>
+        <div class="hide-item-open" id="open">
+            <i class="fas fa-bars" onclick="openDrawer()"></i>
+        </div>
+        <div class="hide-item-close" id="close">
+            <i class="fas fa-window-close" onclick="closeDrawer()"></i>
+        </div>
     </div>
     <div class="todo-container">
-        <div class="todo-list">
+        <div class="todo-list" id="drawer">
             <h2>My Tasks</h2>
             <form action="">
                 <input type="text" name="todo" id="todo" placeholder="New Todo List..." class="input-field" />
